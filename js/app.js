@@ -10,7 +10,8 @@
 		})
 		.controller('MapCtrl', function($scope, $window, $log, $sce, $timeout, $http){
 
-			$http({method: 'GET', url: 'http://geoportal-geoportail.gc.ca/arcgis/rest/services/Reported_Observations_Aquatic_Invasive_Species_ENG/MapServer/layers?f=pjson'}).
+			//$http({method: 'GET', url: 'http://geoportal-geoportail.gc.ca/arcgis/rest/services/Reported_Observations_Aquatic_Invasive_Species_ENG/MapServer/layers?f=pjson'}).
+			$http({method: 'GET', url: '10.31.json'}).
 			  success(function(data, status, headers, config) {
 			  	$log.log(status);
 			  	// remove underscore from names
